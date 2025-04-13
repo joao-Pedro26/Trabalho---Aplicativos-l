@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Wiki Lang</title>
+    <script type="module" src="./componentes/container.js"></script>
+    <script type="module" src="./componentes/inputbusca.js"></script>
 </head>
 <body>
     <header>
@@ -23,24 +25,9 @@
         </div>
     </header>
     <main>
-        <div class="divBusca">
-            <input type="text" placeholder="Buscar linguagem..." class="inputBusca">
-        </div>
-        <div class="divContainers">
-           <div class="Container">
-                <h1>sdfgsdfg</h1>
-           </div>
-            <div class="Container">
-                <h1>sdfgsdfg</h1>
-            </div>
-            <div class="Container">
-                <h1>sdfgsdfg</h1>
-            </div>
-            <div class="Container">
-                <h1>sdfgsdfg</h1>
-            </div>
-            
-        </div>
+            <input-busca></input-busca>
+            <container-linguagens></container-linguagens>
+         
     </main>
 
 

@@ -45,6 +45,8 @@
 
 }
 
+
+
 /*Fim Cabeçalho  */
 
 /* Busca  */
@@ -75,25 +77,69 @@
 /* Containers */
 
 .divContainers {
-    display: flex;
-    margin-top: 20px;
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-top: 40px;
 
-    width: 100%;
-    height: 100vh;
-    gap:  100px;
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+    border-top: 1px solid #e7e7e7;
+    padding: 40px 50px;
+    gap: 100px; 
+    padding-left: 250px;
 }
 
 .Container {
-    display: flex;
-    width: 280px;
+    flex: 1 1 280px; 
+    max-width: 280px; 
     height: 330px;
-    margin-top: 20px;
     border-radius: 8px;
-    background-color: whitesmoke;
-    box-shadow: 3px 7px 5px rgba(0, 0, 0, 0.1)
+    border: 2px solid whitesmoke;
+    background-color: white;
+    box-shadow: 2px 7px 5px rgba(0, 0, 0, 0.1);
+    position: relative; 
+
 }
 
+.Container:hover {
+    transform: translateY(-10px);
+    height: 340px;
+    transition: all 0.3s ease;
+   
+}
+
+.Titulo{
+    font-size: 24px; /* Ajuste para um tamanho mais proporcional */
+    margin-top: 25px;
+    text-align: left;
+    padding-left: 20px;
+    font-family: Impact, fantasy; /* Fonte moderna */
+    color: #000000; /* Cor escura para contraste */
+}
+
+.Resumo{
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    color: #555; /* Cor mais suave para o texto secundário */
+}
+
+.divLogo {
+    display: flex;
+    justify-content: left;
+    height: 100px; /* Adjust as needed */
+    width: 100px; /* Adjust as needed */
+    
+}
+
+.logoLang {
+    height: 130px;
+    width: 130px;
+    object-fit: contain;
+    display: block; 
+    position: absolute; 
+    top: 190px; 
+    left: 140px;
+}
 /* Fim Containers */
