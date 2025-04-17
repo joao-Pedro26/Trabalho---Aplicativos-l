@@ -34,6 +34,7 @@
     gap: 15px;
     margin-left: 83%;
     margin-top: 14px;
+    padding-left: 15px;
     
 }
 
@@ -100,8 +101,7 @@
 }
 
 .Container:hover {
-    transform: translateY(-10px);
-    height: 340px;
+    transform: translateY(-13px);
     transition: all 0.3s ease;
    
 }

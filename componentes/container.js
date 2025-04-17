@@ -33,15 +33,16 @@ class Container extends HTMLElement {
   }
   connectedCallback() {
     this.render(this.linguagens);
-
-    const inputBusca = document.querySelector('input-busca');
-    inputBusca.addEventListener('input', (event) => {
-      const valorBusca = event.target.value.toLowerCase();
-      const linguagensFiltradas = this.linguagens.filter(linguagem => 
-        linguagem.titulo.toLowerCase().includes(valorBusca) );
-      this.render(linguagensFiltradas);
-    });
-  }
+      const inputBusca = document.querySelector('input-busca');
+      inputBusca.addEventListener('input', (event) => {
+        const valorBusca = event.target.value.toLowerCase();
+        const linguagensFiltradas = this.linguagens.filter(linguagem => 
+          linguagem.titulo.toLowerCase().includes(valorBusca) );
+        this.render(linguagensFiltradas);
+      });
+  
+    }
+   
 
   render(linguagens) {   
     this.innerHTML = `
@@ -49,7 +50,7 @@ class Container extends HTMLElement {
       ${linguagens
         .map(
           (linguagem) => `
-          <div class="Container">
+          <div class="Container" data-titulo="${linguagem.titulo}">
             <div class="Titulo">
               <p>${linguagem.titulo}</p>
             </div>
@@ -65,6 +66,13 @@ class Container extends HTMLElement {
         .join("")}
     </div>
   `;
+
+    this.querySelectorAll('.Container').forEach(container => {
+      container.addEventListener('click', () => {
+        const titulo = container.getAttribute('data-titulo');
+        window.location.href = `detalhes.html?titulo=${encodeURIComponent(titulo)}`;
+      });
+    });
   }
 }
 customElements.define('container-linguagens', Container);
