@@ -27,6 +27,8 @@ class Container extends HTMLElement {
         resumo: "Ruby é uma linguagem de programação dinâmica e de alto nível, conhecida por sua simplicidade e produtividade. É amplamente utilizada no desenvolvimento de aplicações web, especialmente com o framework Ruby on Rails.",
         logo: "logo-ruby.png",
         },
+        
+        
     ];
   }
   connectedCallback() {
