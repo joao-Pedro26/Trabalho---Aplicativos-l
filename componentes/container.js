@@ -71,7 +71,7 @@ class Container extends HTMLElement {
       container.addEventListener('click', () => {
         const titulo = container.getAttribute('data-titulo');
         window.location.href = `detalhes.html?titulo=${encodeURIComponent(titulo)}`;
-      });
+      });                           
     });
   }
 }

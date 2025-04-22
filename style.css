@@ -143,3 +143,25 @@
     left: 140px;
 }
 /* Fim Containers */
+
+/* Pagina de Detalhamento */
+
+ .detalheContainer {
+    display: flex;
+    border-top: 1px solid #e7e7e7;
+    margin-top: 20px;
+    padding: 40px 50px;
+
+ }
+
+ .logoDetalhes {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    display: block; 
+    position: absolute; 
+    margin-top: 30px;
+    left: 70px;
+    box-shadow: -1px -1px 20px 12px rgb(189 166 166 / 10%);
+    border-radius: 8px;
+ }

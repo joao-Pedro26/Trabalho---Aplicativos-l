@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Detalhes da Linguagem</title>
     <script type="module" src="./componentes/detalhes.js"></script>
+    <script type="module" src="./componentes/cabecalho.js"></script>
+    <script type="module" src="./componentes/inputbusca.js"></script>
   </head>
   <body>
     <header>
-      <h1>Detalhes da Linguagem</h1>
+      <cabecalho-pagina></cabecalho-pagina>
     </header>
     <main>
-      <detalhes-linguagem></detalhes-linguagem>
+      <input-busca></input-busca>
+        <div class="detalheContainer">
+          <img src="logo-ruby.png" alt="JavaScript" class="logoDetalhes">
+        </div>
     </main>
   </body>
 </html>
