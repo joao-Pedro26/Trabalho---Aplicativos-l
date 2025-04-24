@@ -127,8 +127,8 @@
 .divLogo {
     display: flex;
     justify-content: left;
-    height: 100px; /* Adjust as needed */
-    width: 100px; /* Adjust as needed */
+    height: 100px;
+    width: 100px; 
     
 }
 
@@ -141,7 +141,7 @@
     top: 190px; 
     left: 140px;
 }
-/* Fim Containers */
+/* Fim Containers */ 
 
 /* Pagina de Detalhamento */
 
