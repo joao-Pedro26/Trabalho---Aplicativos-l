@@ -62,10 +62,25 @@ class Container extends HTMLElement {
         resumo: "C# é uma linguagem de programação desenvolvida pela Microsoft, amplamente utilizada para desenvolvimento de aplicações desktop, web e jogos.",
         logo: "imagens/logo-csharp.png",
       },
+      {
+        titulo: "Amor",
+        resumo: "Te amo muitãooooo meu amorrr",
+        logo: "imagens/amor.png",
+      },
     ];
   }
   connectedCallback() {
-    this.render(this.linguagens);
+    const params = new URLSearchParams(window.location.search);
+    const busca = params.get('busca');
+    if (busca) {
+        const valorBusca = busca.toLowerCase();
+        const linguagensFiltradas = this.linguagens.filter(linguagem =>
+            linguagem.titulo.toLowerCase().includes(valorBusca)
+        );
+        this.render(linguagensFiltradas);
+    } else {
+        this.render(this.linguagens);
+    }
 
     document.addEventListener('busca', (event) => {
         const valorBusca = event.detail.toLowerCase();

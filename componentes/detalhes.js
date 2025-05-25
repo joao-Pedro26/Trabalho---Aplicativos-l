@@ -169,6 +169,12 @@ class DetalhesLinguagem extends HTMLElement {
             }`,
             video: "https://www.youtube.com/embed/GhQdlIFylQ8",
             },
+             {
+            titulo: "Amor",
+            texto: "Para meu amorzinho.",
+            logo: "imagens/amor.png",
+            
+            },
         ];
     }
 
@@ -219,3 +225,10 @@ class DetalhesLinguagem extends HTMLElement {
 
 
 customElements.define('detalhes-linguagem', DetalhesLinguagem);
+
+document.addEventListener('busca', (event) => {
+    // Aqui você pode redirecionar para a página principal com o termo buscado,
+    // ou implementar uma busca local, ou mostrar uma mensagem.
+    // Exemplo: redirecionar para index.html com o termo de busca
+    window.location.href = `index.html?busca=${encodeURIComponent(event.detail)}`;
+});

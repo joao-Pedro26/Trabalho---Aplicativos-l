@@ -6,6 +6,10 @@
 body {
     overflow-x: hidden;
 }
+main {
+    margin-top: 100px;
+   
+}
 /* Cabeçalho  */
 .divTopo {
     display: flex;
@@ -19,13 +23,13 @@ body {
 .logoCti {
     width: 100px;
     height: 45px;
-  
 }
 
 .logoCti , .divFotos {
 
     margin-top: 8px;
     margin-left: 40px;
+
 }
 
 .divFotos {
@@ -46,11 +50,17 @@ body {
     background-color: aqua;
 
 }
-
-
+header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1
+}
 @media screen and (max-width: 768px) {
     .divTopo {
-        flex-direction: column;
+        flex-direction: row-reverse;
     }
     
     .logoCti {
@@ -59,12 +69,7 @@ body {
         height: 38px;
     }
     
-    .divFotos {
-        margin-left: 0;
-        margin-top: 10px;
-        justify-content: center; 
-        margin-bottom: 100px;
-    }
+   
     
 }
 
@@ -86,6 +91,7 @@ body {
     border: 1px solid #ccc;
     padding-left: 20px;
     font-size: 16px;
+    opacity:  1;
 
  
 }
@@ -93,6 +99,58 @@ body {
 .inputBusca:focus {
     outline: none;
     border-color: #007bff;
+}
+
+/* Ícone de busca só aparece no mobile */
+
+.iconBusca {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+.btnBuscaMobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .btnBuscaMobile {
+        display: flex;
+    }
+    #divBusca {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+    #divBusca.ativo{
+        display: flex;
+    }
+   
+    .divBusca {
+        margin-left: 0;
+        width: 90vw;
+    }
+    .inputBusca {
+        position: fixed;
+        top: 10;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* maior que o header */
+        background: rgba(255,255,255,0.95); /* opcional, para dar contraste */
+        padding: 20px ;
+    }
+    
+  
 }
 /* Fim Busca  */
 
@@ -169,11 +227,15 @@ body {
     .divContainers {
         padding: 10px;
         gap: 40px; 
-        justify-content: center;    
+        justify-content: center;   
     }
-    .divBusca {
-        display: none  ;
+    .Titulo {
+        font-family: Impact, fantasy;
+        font-size: 25px;
+        font: bold;
     }
+  
+   
 }
 /* Fim Containers */ 
 
@@ -276,4 +338,57 @@ body {
     height: 250px;
     border-radius: 8px;
     box-shadow: -1px -1px 20px 12px rgb(189 166 166 / 10%);
+}
+
+@media screen and (max-width: 768px) {
+    .detalheContainer {
+        margin-top: 10vh;
+        flex-direction: column;
+
+        }
+   
+    .logoDetalhes {
+        position: relative;
+        width: 50vw;
+        height: 20vh;
+        margin: auto;
+        left: 0;
+        box-shadow: none;
+
+ }
+
+    .tituloDetalhes {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        margin-right: 100vw;
+        top: 10px;
+        left: 0;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+    .detalheExemploTexto {
+        margin-left: 0;
+    }
+    .codigoExemplo {
+        padding-right: 0;
+        display: none;
+    }
+    .video {
+        display: none;
+    }
+
+    .detalheConteudo {
+        display: none;
+    }
+    
 }
