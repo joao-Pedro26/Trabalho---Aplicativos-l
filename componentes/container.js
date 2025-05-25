@@ -62,11 +62,7 @@ class Container extends HTMLElement {
         resumo: "C# é uma linguagem de programação desenvolvida pela Microsoft, amplamente utilizada para desenvolvimento de aplicações desktop, web e jogos.",
         logo: "imagens/logo-csharp.png",
       },
-      {
-        titulo: "Amor",
-        resumo: "Te amo muitãooooo meu amorrr",
-        logo: "imagens/amor.png",
-      },
+     
     ];
   }
   connectedCallback() {

@@ -169,12 +169,7 @@ class DetalhesLinguagem extends HTMLElement {
             }`,
             video: "https://www.youtube.com/embed/GhQdlIFylQ8",
             },
-             {
-            titulo: "Amor",
-            texto: "Para meu amorzinho.",
-            logo: "imagens/amor.png",
-            
-            },
+           
         ];
     }
 
