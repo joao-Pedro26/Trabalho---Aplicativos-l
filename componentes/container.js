@@ -66,19 +66,20 @@ class Container extends HTMLElement {
   }
   connectedCallback() {
     this.render(this.linguagens);
-      const inputBusca = document.querySelector('input-busca');
-      inputBusca.addEventListener('input', (event) => {
-        const valorBusca = event.target.value.toLowerCase();
-        const linguagensFiltradas = this.linguagens.filter(linguagem => 
-          linguagem.titulo.toLowerCase().includes(valorBusca) );
+
+    document.addEventListener('busca', (event) => {
+        const valorBusca = event.detail.toLowerCase();
+        const linguagensFiltradas = this.linguagens.filter(linguagem =>
+            linguagem.titulo.toLowerCase().includes(valorBusca)
+        );
         this.render(linguagensFiltradas);
-      });
-  
-    }
-   
+    });
+}
 
   render(linguagens) {   
+
     this.innerHTML = `
+     
     <div class="divContainers">
       ${linguagens
         .map(
@@ -98,6 +99,9 @@ class Container extends HTMLElement {
         )
         .join("")}
     </div>
+    
+         
+        
   `;
 
     this.querySelectorAll('.Container').forEach(container => {

@@ -3,12 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    overflow-x: hidden;
+}
 /* Cabeçalho  */
 .divTopo {
     display: flex;
     flex-direction: row;
-    margin-top: 0;
     text-align: center;
     height: 82px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -47,6 +48,25 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .divTopo {
+        flex-direction: column;
+    }
+    
+    .logoCti {
+        margin: auto;
+        width: 85px;
+        height: 38px;
+    }
+    
+    .divFotos {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center; 
+        margin-bottom: 100px;
+    }
+    
+}
 
 /*Fim Cabeçalho  */
 
@@ -56,6 +76,7 @@
     display: flex;
     justify-content: center;
     margin-top: 25px;
+    margin-left:  50vh;
 }
 
 .inputBusca {
@@ -84,9 +105,11 @@
     margin-top: 20px;
     border-top: 1px solid #e7e7e7;
     padding: 40px 50px;
-    gap: 100px; 
+    gap: 90px; 
     padding-left: 250px;
 }
+
+
 
 .Container {
     flex: 1 1 280px; 
@@ -140,6 +163,17 @@
     position: absolute; 
     top: 190px; 
     left: 140px;
+}
+
+@media screen and (max-width: 768px) {
+    .divContainers {
+        padding: 10px;
+        gap: 40px; 
+        justify-content: center;    
+    }
+    .divBusca {
+        display: none  ;
+    }
 }
 /* Fim Containers */ 
 
