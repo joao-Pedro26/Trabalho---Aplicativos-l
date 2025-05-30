@@ -296,8 +296,7 @@ header {
     left: 45%;
     width: 45vw;
     background-color: #f8f8f8; 
-    padding: 10px; ;
-    padding-right: 370px;
+    padding: 10px; 
     border-radius: 5px;
     border: solid 1px #e7e7e7; 
     margin-top: 10px; 
@@ -328,8 +327,8 @@ header {
     padding-bottom: 100px;
     width: 51vw;
 }
- code {
-    padding-left: 10vw;
+ .exemploCodigo {
+    padding-right: 10vw;
  }
 .divVideo {
     position: absolute;

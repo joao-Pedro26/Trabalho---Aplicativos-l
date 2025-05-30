@@ -196,7 +196,7 @@ class DetalhesLinguagem extends HTMLElement {
               <h2>Exemplo de uso</h2>
               <div>
               <pre class="codigoExemplo">
-        <code>
+        <code class="exemploCodigo">
             ${linguagem.exemplo}
         </code>
               </pre>
