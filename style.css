@@ -163,9 +163,9 @@ header {
     margin-top: 20px;
     border-top: 1px solid #e7e7e7;
     padding: 40px 50px;
-    gap: 90px; 
-    padding-left: 250px;
-}
+    gap: 90px;
+    justify-content: center;
+    }
 
 
 
