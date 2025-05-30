@@ -280,7 +280,7 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    left: 600px;
+    left: 43vw;
     font-family: 'Roboto', sans-serif; 
     font-weight: bold;
     font-size: 14px;
@@ -312,7 +312,7 @@ header {
     font-family: 'Roboto', sans-serif; 
     font-size: 14px;
     color: #555; 
-    margin-left: 600px;
+    margin-left: 43vw;
     margin-top: 100px;
     position: relative;
     top: 300px;
@@ -326,8 +326,11 @@ header {
     letter-spacing: 1.2px; 
     text-align: justify;
     padding-bottom: 100px;
+    width: 51vw;
 }
-
+ code {
+    padding-left: 10vw;
+ }
 .divVideo {
     position: absolute;
     top: 650px;
