@@ -214,13 +214,23 @@ header {
 }
 
 .logoLang {
-    height: 130px;
-    width: 130px;
-    object-fit: contain;
-    display: block; 
-    position: absolute; 
-    top: 190px; 
-    left: 140px;
+    height: 90px;
+    width: 90px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: #f7f7f7;
+    display: block;
+    position: relative;
+    margin: 18px auto 0 auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Container:hover .logoLang,
+.Container:active .logoLang,
+.Container.touch-effect .logoLang {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
 }
 
 @media screen and (max-width: 768px) {
@@ -234,164 +244,281 @@ header {
         font-size: 25px;
         font: bold;
     }
+    .logoLang {
+        width: 60px;
+        height: 60px;
+        margin: 10px auto 0 auto;
+    }
   
    
 }
-/* Fim Containers */ 
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+    header {
+        height: 60px;
+    }
+    .divTopo {
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    .logoCti {
+        width: 70px;
+        height: 30px;
+        margin: 0 0 10px 10px;
+    }
+    .divFotos {
+        width: 90px;
+        height: 35px;
+        gap: 8px;
+        margin: 0 0 0 10px;
+        padding: 0;
+    }
+    main {
+        margin-top: 70px;
+    }
+    .divBusca {
+        width: 100vw;
+        margin: 10px 0 0 0;
+        padding: 0 5vw;
+    }
+    .inputBusca {
+        width: 90vw;
+        min-width: 0;
+        font-size: 15px;
+        padding: 10px;
+    }
+    .divContainers {
+        flex-direction: column;
+        gap: 25px;
+        padding: 10px 2vw;
+    }
+    .Container {
+        max-width: 98vw;
+        min-width: 0;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .Titulo {
+        font-size: 18px;
+        padding-left: 10px;
+        margin-top: 15px;
+    }
+    .Resumo {
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .divLogo {
+        width: 60px;
+        height: 60px;
+    }
+    .logoLang {
+        width: 70px;
+        height: 70px;
+        left: unset;
+        top: unset;
+        position: relative;
+        margin: 10px auto 0 auto;
+        display: block;
+    }
+    .detalheContainer {
+        flex-direction: column;
+        padding: 10px 2vw;
+        margin-top: 5vw;
+    }
+    .logoDetalhes {
+        width: 90vw;
+        height: 30vw;
+        left: 0;
+        margin: 0 auto 10px auto;
+        position: relative;
+    }
+    .tituloDetalhes {
+        font-size: 16px;
+        left: 0;
+        margin: 10px 0;
+    }
+    .detalheExemploTexto {
+        width: 95vw;
+        margin-left: 0;
+        top: 0;
+        padding-top: 10px;
+    }
+    .detalheTexto {
+        width: 95vw;
+        padding-bottom: 30px;
+    }
+    .codigoExemplo {
+        width: 95vw;
+        left: 0;
+        top: 0;
+        position: relative;
+        margin: 10px 0;
+        font-size: 13px;
+        padding: 8px;
+    }
+    .divVideo {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 10px 0;
+    }
+    .video {
+        width: 95vw;
+        height: 30vw;
+        margin: 0 auto;
+    }
+}
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+  .Container:active, .Container:focus {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+  .logoLang {
+    transition: all 0.3s ease;
+  }
+}
 
-/* Pagina de Detalhamento */
+/* Efeito de toque para mobile: aumenta imagem ao tocar/clicar e volta ao soltar */
+.Container:active .logoLang,
+.Container.touch-effect .logoLang {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
 
- .detalheContainer {
+/* Remove o efeito quando não está ativo */
+.Container .logoLang {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+.detalheContainer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 25px;
-    padding: 40px 50px;
-
- }
-
- .logoDetalhes {
-    width: 400px;
-    height: 400px;
-    object-fit: contain;
-    display: block; 
-    position: absolute;
-    margin-top: 30px;
-    left: 70px;
-    box-shadow: -1px -1px 20px 12px rgb(189 166 166 / 10%);
-    border-radius: 8px;
- }
-
+    padding: 40px 0 0 0;
+}
+.detalhes-img-responsive {
+    margin: 0 auto 16px auto;
+    display: block;
+}
 .tituloDetalhes {
-
-    position: relative;
-    bottom: 15px;
-    left: 35px;
-    color: #454546;
-    font-family: Impact, fantasy; 
-    letter-spacing: 3px;
-}   
-
-.detalheConteudo {
-    display: flex;
-    flex-direction: column;
-        
+    text-align: center;
+    margin: 10px 0 24px 0;
 }
-.detalheExemplo {
-
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: 43vw;
-    font-family: 'Roboto', sans-serif; 
-    font-weight: bold;
-    font-size: 14px;
-
-    color: #454546; 
-
-}
-
-.codigoExemplo {
-    font-family: 'Consolas', 'Courier New', monospace; 
-    position: absolute;
-    top: 40px;
-    left: 45%;
-    width: 45vw;
-    background-color: #f8f8f8; 
-    padding: 10px; 
-    border-radius: 5px;
-    border: solid 1px #e7e7e7; 
-    margin-top: 10px; 
-    font-size: 14px;
-    color: #333;
-}
-
-
-.detalheExemploTexto {
-    border-top: 1px solid #e7e7e7;
-    padding-top: 20px;
-    font-family: 'Roboto', sans-serif; 
-    font-size: 14px;
-    color: #555; 
-    margin-left: 43vw;
-    margin-top: 100px;
-    position: relative;
-    top: 300px;
-    width: 870px;
-}
-
-.detalheTexto {
-    font-size: 15px;
-    margin-top: 20px;
-    line-height: 1.5; 
-    letter-spacing: 1.2px; 
-    text-align: justify;
-    padding-bottom: 100px;
-    width: 51vw;
-}
- .exemploCodigo {
-    padding-right: 10vw;
- }
 .divVideo {
-    position: absolute;
-    top: 650px;
-    left: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 24px 0;
+    position: static;
 }
-
 .video {
+    display: block;
+    margin: 0 auto;
+    max-width: 95vw;
     width: 400px;
     height: 250px;
     border-radius: 8px;
     box-shadow: -1px -1px 20px 12px rgb(189 166 166 / 10%);
 }
-
+.detalheConteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px 32px 16px;
+    box-sizing: border-box;
+}
+.detalheExemplo {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.codigoExemplo {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: #f8f8f8;
+    padding: 18px 18px 18px 18px;
+    border-radius: 8px;
+    border: solid 1px #e7e7e7;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-x: auto;
+}
+.detalheExemploTexto {
+    border-top: 1px solid #e7e7e7;
+    padding-top: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #555;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.detalheTexto {
+    font-size: 15px;
+    margin-top: 20px;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-align: justify;
+    padding: 0 8px 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
 @media screen and (max-width: 768px) {
-    .detalheContainer {
-        margin-top: 10vh;
-        flex-direction: column;
-
-        }
-   
-    .logoDetalhes {
-        position: relative;
-        width: 50vw;
-        height: 20vh;
-        margin: auto;
-        left: 0;
-        box-shadow: none;
-
- }
-
-    .tituloDetalhes {
-        font-size: 20px;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 1px;
-        margin-right: 100vw;
-        top: 10px;
-        left: 0;
-        margin: auto;
+    .video {
+        width: 90vw;
+        height: 40vw;
+        min-height: 180px;
+        max-width: 100vw;
     }
-
-
-
-
-
-
-
-
-
-
-    .detalheExemploTexto {
-        margin-left: 0;
+    .detalheExemplo, .detalheExemploTexto {
+        max-width: 98vw;
+        padding: 0 4vw;
     }
     .codigoExemplo {
-        padding-right: 0;
-        display: none;
+        max-width: 98vw;
+        font-size: 13px;
+        padding: 12px;
     }
-    .video {
-        display: none;
+    .detalhes-img-responsive {
+        max-width: 80px;
+        max-height: 80px;
+        margin: 0 auto 12px auto;
+        display: block;
     }
-
-    .detalheConteudo {
-        display: none;
+}
+@media screen and (max-width: 480px) {
+    .detalheContainer {
+        padding: 16px 0 0 0;
     }
-    
+    .detalheExemplo, .detalheExemploTexto {
+        max-width: 100vw;
+        padding: 0 2vw;
+    }
+    .codigoExemplo {
+        max-width: 100vw;
+        font-size: 12px;
+        padding: 8px;
+    }
+    .detalhes-img-responsive {
+        max-width: 56px;
+        max-height: 56px;
+        margin: 0 auto 8px auto;
+    }
 }

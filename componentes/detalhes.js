@@ -185,7 +185,7 @@ class DetalhesLinguagem extends HTMLElement {
             this.innerHTML = `
                 <main>
         <div class="detalheContainer">
-          <img src="${linguagem.logo}" alt="Logo" class="logoDetalhes">
+          <img src="${linguagem.logo}" alt="Logo" class="logoDetalhes detalhes-img-responsive">
           <h1 class="tituloDetalhes">${linguagem.titulo}</h1>
         </div>
         <div  class="divVideo">

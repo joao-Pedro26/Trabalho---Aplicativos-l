@@ -123,4 +123,20 @@ class Container extends HTMLElement {
     });
   }
 }
+// Adiciona efeito de toque no mobile para aumentar a imagem
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.Container').forEach(function (container) {
+      container.addEventListener('touchstart', function () {
+        container.classList.add('touch-effect');
+      });
+      container.addEventListener('touchend', function () {
+        container.classList.remove('touch-effect');
+      });
+      container.addEventListener('touchcancel', function () {
+        container.classList.remove('touch-effect');
+      });
+    });
+  });
+}
 customElements.define('container-linguagens', Container);
