@@ -294,7 +294,7 @@ header {
     position: absolute;
     top: 40px;
     left: 45%;
-    width: 45vw;
+    max-width: 45vw;
     background-color: #f8f8f8; 
     padding: 10px; 
     border-radius: 5px;
@@ -343,7 +343,7 @@ header {
     box-shadow: -1px -1px 20px 12px rgb(189 166 166 / 10%);
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .detalheContainer {
         margin-top: 10vh;
         flex-direction: column;
@@ -370,28 +370,110 @@ header {
         margin: auto;
     }
 
-
-
-
-
-
-
-
-
-
-    .detalheExemploTexto {
-        margin-left: 0;
+    .detalheExemplo {
+        position: relative;
+        margin: auto;
+        top: 20px;
+        left: auto;
     }
-    .codigoExemplo {
+
+
+
+     .detalheExemploTexto {
+        margin-left: 0;
+    } */
+    /* .codigoExemplo {
         padding-right: 0;
         display: none;
+    }*/
+     /* .video {
+        display: none;
+    } */
+
+    /* .detalheConteudo {
+        display: none;
+    }   */
+    
+
+
+@media screen and (max-width: 1024px) {
+    .detalheContainer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        margin-top: 60px;
+        gap: 20px;
+    }
+    .logoDetalhes {
+        position: static;
+        width: 50vw;
+        height: 20vh;
+        margin: 0 auto 16px auto;
+        box-shadow: none;
+        display: block;
+    }
+    .tituloDetalhes {
+        position: static;
+        font-size: 2rem;
+        text-align: center;
+        margin: 0 0 16px 0;
+    }
+    .divVideo {
+        position: static;
+        margin: 24px auto 70px auto;
+        display: flex;
+        justify-content: center;
     }
     .video {
-        display: none;
+        width: 90vw;
+        max-width: 350px;
+        min-height: 200px;
     }
-
     .detalheConteudo {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-    
+    .detalheExemplo {
+        position: static;
+        margin: 0 auto 24px auto;
+        width: 100%;
+        max-width: 87vw;
+    }
+    .codigoExemplo {
+        position: static;
+        left: 0;
+        top: 0;
+        max-width: 100vw;
+        font-size: 13px;
+        padding: 10px;
+        margin: 10px auto;
+        overflow-x: auto;
+    }
+   
+    .detalheExemploTexto {
+        position: static;
+        margin: 24px auto 0 auto;
+        width: 100%;
+        max-width: 87vw;
+        top: 0;
+        left: 0;
+    }
+    .detalheTexto {
+        width: 100%;
+        font-size: 15px;
+        padding-bottom: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+   
+
+  
+
+    .codigoExemplo {
+        font-size: 11px;
+        padding: 6px;
+    }
 }
