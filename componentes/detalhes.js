@@ -222,8 +222,5 @@ class DetalhesLinguagem extends HTMLElement {
 customElements.define('detalhes-linguagem', DetalhesLinguagem);
 
 document.addEventListener('busca', (event) => {
-    // Aqui você pode redirecionar para a página principal com o termo buscado,
-    // ou implementar uma busca local, ou mostrar uma mensagem.
-    // Exemplo: redirecionar para index.html com o termo de busca
     window.location.href = `index.html?busca=${encodeURIComponent(event.detail)}`;
 });
