@@ -3,10 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    height: 100%;
+}
+
 body {
-    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 main {
+    flex: 1 0 auto;
     margin-top: 100px;
    
 }
@@ -429,7 +436,7 @@ header {
 /* Rodapé */
 .rodape {
     width: 100%;
-    background: #222;
+    background: #c5c5c5;
     color: #fff;
     padding: 24px 0 16px 0;
     position: relative;
@@ -437,8 +444,10 @@ header {
     left: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    box-shadow: 1px -13px 6px rgb(0 0 0 / 5%);
+    box-shadow: 4px -8px 6px rgb(0 0 0 / 5%);
     margin-top: 30px;
+    flex-shrink: 0;
+    display: none;
 }
 .rodape-conteudo {
     max-width: 1200px;
@@ -461,10 +470,12 @@ header {
         text-align: center;
         padding: 0 10px;
         gap: 6px;
+
     }
     .rodape {
         font-size: 14px;
         padding: 18px 0 10px 0;
+        display: flex;
     }
 }
 
